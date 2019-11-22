@@ -1,11 +1,13 @@
-package com.zy.projectcase.realtimeprocessword;
+package com.zy;
 
 import com.huaban.analysis.jieba.JiebaSegmenter;
+import org.apache.spark.serializer.KryoSerializer;
 
 public class JiebaGetter {
 //    static JiebaSegmenter
     static JiebaGetter instance;
     JiebaSegmenter jieba;
+    KryoSerializer ll;
     static {
         instance = new JiebaGetter();
     }

@@ -11,7 +11,7 @@ object ProduceWord {
       val rand = new Random()
       val msg = str(rand.nextInt(str.size))
       SendMsg.produceMsg("wordCount",msg)
-      Thread.sleep(200)
+      Thread.sleep(5)
     }
 
   }

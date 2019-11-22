@@ -8,13 +8,14 @@ import org.apache.spark.streaming.{Duration, StreamingContext}
 import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
 import org.apache.spark.streaming.kafka010.{CanCommitOffsets, HasOffsetRanges, KafkaUtils, OffsetRange}
-import com.huaban.analysis.jieba.JiebaSegmenter
+import com.zy.JiebaGetter
 
 object WordStatisticsApp {
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf()
     conf.setMaster("local[2]")
     conf.setAppName("wordStatistics")
+//    conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
     val kafkaParams = KafkaCommon.generateParam(classOf[StringDeserializer],classOf [StringDeserializer],"wordCount")
     val ssc = new StreamingContext(conf,Duration.apply(3000))
 
