@@ -10,8 +10,8 @@ object ProduceWord {
     while (true){
       val rand = new Random()
       val msg = str(rand.nextInt(str.size))
-      SendMsg.produceMsg("wordCount",msg)
-      Thread.sleep(5)
+      SendMsg.produceMsg("words",str.mkString(","))
+      Thread.sleep(50)
     }
 
   }

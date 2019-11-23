@@ -13,7 +13,7 @@ import com.zy.JiebaGetter
 object WordStatisticsApp {
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf()
-    conf.setMaster("local[2]")
+//    conf.setMaster("local[2]")
     conf.setAppName("wordStatistics")
 //    conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
     val kafkaParams = KafkaCommon.generateParam(classOf[StringDeserializer],classOf [StringDeserializer],"wordCount")
