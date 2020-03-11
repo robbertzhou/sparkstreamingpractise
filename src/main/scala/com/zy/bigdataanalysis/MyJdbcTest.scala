@@ -9,9 +9,11 @@ import org.apache.spark.{SparkConf, SparkContext}
   * create 2020-03-11
   * author zhouyu
   * desc jdbc rdd
+  * 等等
   */
 object MyJdbcTest {
   def main(args: Array[String]): Unit = {
+    System.setProperty("hadoop.home.dir", "F:\\hadoop\\hadoop-2.6.5\\bin")
     val conf = new SparkConf()
     conf.setMaster("local[2]")
     conf.setAppName("mysqljdbc")
