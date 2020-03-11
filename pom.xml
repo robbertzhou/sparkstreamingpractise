@@ -144,7 +144,18 @@
             <artifactId>hadoop-common</artifactId>
             <version>2.6.5</version>
         </dependency>
-
+        <dependency>
+            <!-- 服务器开发需要的jar包 -->
+            <groupId>org.neo4j.driver</groupId>
+            <artifactId>neo4j-java-driver</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+        <dependency>
+            <!-- 嵌入式开发需要的jar包 -->
+            <groupId>org.neo4j</groupId>
+            <artifactId>neo4j</artifactId>
+            <version>3.4.5</version>
+        </dependency>
     </dependencies>
 
        <build>
